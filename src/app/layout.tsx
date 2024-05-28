@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter, Source_Sans_3 } from 'next/font/google'
+import { Source_Sans_3 } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const source = Source_Sans_3({ subsets: ['latin'] })
 
@@ -16,7 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={source.className}>{children}</body>
+      <body
+        className={`${source.className} text-text-color flex flex-col min-h-screen`}
+      >
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
