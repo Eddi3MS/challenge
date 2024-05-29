@@ -12,22 +12,33 @@ import {
 } from '@/components/ui/select'
 import places from '@/data/place.json'
 import { cn } from '@/lib/utils'
+import { useLocation } from '@/store/location'
 import { Bed, MapPin, Search } from 'lucide-react'
 import { useState } from 'react'
 
 const roomsOptions = [
   { name: 'Todos', value: '', id: 1 },
-  { name: '1+', value: '1+', id: 2 },
-  { name: '2+', value: '2+', id: 3 },
-  { name: '3+', value: '3+', id: 4 },
-  { name: '4+', value: '4+', id: 5 },
+  { name: '1+', value: '1', id: 2 },
+  { name: '2+', value: '2', id: 3 },
+  { name: '3+', value: '3', id: 4 },
+  { name: '4+', value: '4', id: 5 },
 ]
 
 const Hero = () => {
+  const setLocation = useLocation((state) => state.setLocation)
   const [local, setLocal] = useState('')
   const [localPop, setLocalPop] = useState(false)
   const [rooms, setRooms] = useState('')
   const [roomsPop, setRoomsPop] = useState(false)
+
+  const handleSearch = () => {
+    const [city, state] = local.trim().split(',')
+    setLocation({
+      city,
+      state,
+      rooms: rooms ? Number(rooms) : undefined,
+    })
+  }
 
   return (
     <section className="md:h-[55vh] flex flex-col items-center justify-center gap-8 relative pb-4 md:pb-0">
@@ -141,8 +152,8 @@ const Hero = () => {
                   <SelectValue placeholder="Todos os tipos" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="light">Compra</SelectItem>
-                  <SelectItem value="dark">Venda</SelectItem>
+                  <SelectItem value="sell">Compra</SelectItem>
+                  <SelectItem value="rent">Venda</SelectItem>
                 </SelectContent>
               </Select>
             </Card>
@@ -153,6 +164,7 @@ const Hero = () => {
               local ? 'w-auto' : ''
             )}
             disabled={!local}
+            onClick={handleSearch}
           >
             <Search /> {local && <span>Buscar</span>}
           </Button>
@@ -161,6 +173,7 @@ const Hero = () => {
         <Button
           className="h-14 rounded-lg transition-all  gap-2 flex md:hidden w-full"
           disabled={!local}
+          onClick={handleSearch}
         >
           <Search /> <span>Buscar Imóveis</span>
         </Button>
