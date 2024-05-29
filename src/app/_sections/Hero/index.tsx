@@ -13,6 +13,7 @@ import {
 import { cn } from '@/lib/utils'
 import { Bed, MapPin, Search } from 'lucide-react'
 import { useState } from 'react'
+import places from '@/data/place.json'
 
 const roomsOptions = [
   { name: 'Todos', value: '', id: 1 },
@@ -41,21 +42,18 @@ const Hero = () => {
       </h1>
       <div className="md:border-2 w-[min(771px,98%)] md:rounded-full flex md:bg-background group flex-col gap-4 md:gap-0 md:flex-row">
         <div className="h-full relative flex-1 flex justify-between focus-within:shadow-lg p-[10px] rounded-lg md:bg-none bg-background md:rounded-full hover:bg-bg-dark group border md:border-none">
-          <Label className="flex flex-col justify-between ml-8 flex-1">
+          <Label
+            className="flex flex-col justify-between ml-8 flex-1"
+            onClick={() => setLocalPop(true)}
+          >
             <span className="flex items-center gap-2">
               <MapPin size={24} />
               <span className="text-black font-bold text-sm">Localização</span>
             </span>
             <Input
-              className="bg-inherit w-full"
+              className="bg-inherit w-full truncate"
               placeholder="Qual é a localização?"
-              value={local}
-              onChange={(e) => {
-                const val = e.target.value
-                setLocal(val)
-
-                setLocalPop(!!val)
-              }}
+              defaultValue={local}
             />
           </Label>
           {localPop && (
@@ -64,19 +62,24 @@ const Hero = () => {
                 Busque por cidade, região, bairro ou código
               </span>
 
-              <div
-                className="flex gap-2 p-4 text-gray-500 hover:bg-gray-100"
-                onClick={() => {
-                  setLocal('Av 123, Eldorado, Contagem - MG')
-                  setLocalPop(false)
-                }}
-              >
-                <MapPin size={16} className="mt-[2px]" />
-                <div>
-                  <p>Av. 123</p>
-                  <p className="text-xs">Eldorado, Contagem - MG</p>
+              {places.map((place) => (
+                <div
+                  key={place.placeId}
+                  className="flex gap-2 p-4 text-gray-500 hover:bg-gray-100"
+                  onClick={() => {
+                    setLocal(`${place.name}, ${place.state.shortname}`)
+                    setLocalPop(false)
+                  }}
+                >
+                  <MapPin size={16} className="" />
+
+                  <div>
+                    <p className="text-xs">
+                      {place.name}, {place.state.name}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              ))}
             </Card>
           )}
         </div>
