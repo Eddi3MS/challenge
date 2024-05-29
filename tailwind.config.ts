@@ -56,6 +56,8 @@ const config = {
         'purple-dark': '#652D91',
         'text-color': '#555555',
         'orange-lighter': '#F36C21',
+        'orange-dark': '##E95808',
+        'bg-dark': '#EDF1F4',
       },
       borderRadius: {
         lg: 'var(--radius)',

@@ -9,9 +9,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-purple-dark text-white hover:bg-primary/90',
+        default: 'bg-orange-lighter text-white hover:bg-orange-dark',
         outline:
           'border border-purple-dark text-purple-dark bg-transparent hover:brightness-105',
+        'outline-gray':
+          'border border-gray-400 text-gray-600 bg-transparent hover:border-gray-400/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
       },
       size: {

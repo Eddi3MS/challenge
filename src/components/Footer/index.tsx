@@ -40,7 +40,7 @@ const Footer = () => {
           <p>
             © Copyright 2021 Netimóveis Brasil SA. Todos os direitos reservados.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-6">
             <a href="#" className="hover:text-purple-dark transition-all">
               Política de Privacidade
             </a>
