@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${source.className} text-text-color flex flex-col min-h-screen`}
+        className={`${source.className} text-gray2 flex flex-col min-h-screen`}
       >
         <Header />
         {children}

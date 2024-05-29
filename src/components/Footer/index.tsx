@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <footer className="py-3 flex items-center bg-orange-lighter">
-      <div className="flex justify-between items-center w-[min(98%,1420px)] mx-auto text-white flex-col lg:flex-row gap-y-4">
+      <div className="flex justify-between items-center w-[min(94%,1248px)] mx-auto text-white flex-col lg:flex-row gap-y-4">
         <Image
           src="/logo_footer.png"
           width={153}

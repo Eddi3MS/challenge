@@ -37,8 +37,8 @@ const Header = () => {
             : 'hidden'
         )}
       />
-      <header className="px-4 sticky left-0 right-0 top-0 bg-background z-20 flex items-center">
-        <div className="flex justify-between items-center w-[min(98%,1420px)] mx-auto">
+      <header className="sticky left-0 right-0 top-0 bg-background z-20 flex items-center">
+        <div className="flex justify-between items-center w-[min(94%,1248px)] mx-auto">
           <div className="flex gap-12 items-center">
             <Image
               src="/logo.png"
@@ -48,7 +48,7 @@ const Header = () => {
               className="h-[42px]"
             />
 
-            <Nav className="hidden lg:flex w-[min(98%,1170px)] mx-auto" />
+            <Nav className="hidden lg:flex w-[min(94%,1170px)] mx-auto" />
           </div>
           <Button
             variant="ghost"

@@ -54,10 +54,16 @@ const config = {
         },
         /* custom */
         'purple-dark': '#652D91',
-        'text-color': '#555555',
+        gray0: '#F3F3F3',
+        gray1: '#848484',
+        gray2: '#555555',
+        gray3: '#3A3A3A',
+        gray4: '#48617E',
         'orange-lighter': '#F36C21',
         'orange-dark': '##E95808',
         'bg-dark': '#EDF1F4',
+        black: '#161616',
+        link: '#2362AF',
       },
       borderRadius: {
         lg: 'var(--radius)',

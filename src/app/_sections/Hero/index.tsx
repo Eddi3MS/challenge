@@ -30,7 +30,7 @@ const Hero = () => {
   const [roomsPop, setRoomsPop] = useState(false)
 
   return (
-    <div className="md:h-[55vh] flex flex-col items-center justify-center gap-8 relative pb-4 md:pb-0">
+    <section className="md:h-[55vh] flex flex-col items-center justify-center gap-8 relative pb-4 md:pb-0">
       <div
         style={{ backgroundImage: 'url(/bg_hero.png)' }}
         className="absolute left-0 right-0 top-0 bg-cover bg-center -z-10 min-h-[173px] md:h-[55vh]"
@@ -40,7 +40,7 @@ const Hero = () => {
         <br className="block md:hidden" /> Aluga.
         <br className="block md:hidden" /> Conecta.
       </h1>
-      <div className="md:border-2 w-[min(771px,98%)] md:rounded-full flex md:bg-background group flex-col gap-4 md:gap-0 md:flex-row">
+      <div className="md:border-2 w-[min(771px,94%)] md:rounded-full flex md:bg-background group flex-col gap-4 md:gap-0 md:flex-row">
         <div className="h-full relative flex-1 flex justify-between focus-within:shadow-lg p-[10px] rounded-lg md:bg-none bg-background md:rounded-full hover:bg-bg-dark group border md:border-none">
           <Label
             className="flex flex-col justify-between ml-8 flex-1"
@@ -108,7 +108,7 @@ const Hero = () => {
             <Card className="absolute -bottom-1 translate-y-full left-0 right-0 space-y-4 p-4 bg-background z-[2]">
               <span className="text-sm block">Número de Quartos</span>
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 flex-wrap">
                 {roomsOptions.map((r) => (
                   <Button
                     key={r.id}
@@ -162,7 +162,7 @@ const Hero = () => {
           <Search /> <span>Buscar Imóveis</span>
         </Button>
       </div>
-    </div>
+    </section>
   )
 }
 
