@@ -32,10 +32,9 @@ const Hero = () => {
   const [roomsPop, setRoomsPop] = useState(false)
 
   const handleSearch = () => {
-    const [city, state] = local.trim().split(',')
+    const city = local.trim().split(',')[0]
     setLocation({
       city,
-      state,
       rooms: rooms ? Number(rooms) : undefined,
     })
   }

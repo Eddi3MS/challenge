@@ -2,7 +2,6 @@ import { create } from 'zustand'
 
 type LocaleState = {
   city: string
-  state: string
   rooms?: number
   setLocation: (locale: Partial<LocaleState>) => void
 }
