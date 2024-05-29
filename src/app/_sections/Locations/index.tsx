@@ -3,6 +3,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardHeader,
   CardTitle,
 } from '@/components/ui/card'
 import {
@@ -67,15 +68,17 @@ const Locations = () => {
                   <Card className="overflow-hidden">
                     <ImageCarousel />
 
-                    <CardContent className="p-4 flex flex-col gap-4">
-                      <CardTitle className="text-base text-black font-bold">
-                        {local.Title}
-                      </CardTitle>
-                      <CardDescription className="text-sm text-gray2">
-                        {local.City}
-                      </CardDescription>
+                    <CardContent className="p-4 flex flex-col gap-3">
+                      <CardHeader className="p-0 space-y-1">
+                        <CardTitle className="text-base text-black font-bold leading-4">
+                          {local.Title}
+                        </CardTitle>
+                        <CardDescription className="text-sm text-gray2 leading-3">
+                          {local.City}
+                        </CardDescription>
+                      </CardHeader>
 
-                      <span className="text-gray3">
+                      <span className="text-gray3 text-sm leading-3">
                         {local.Rooms} {`quarto${local.Rooms > 1 ? 's' : ''}`}
                       </span>
 

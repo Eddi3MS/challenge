@@ -10,10 +10,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import places from '@/data/place.json'
 import { cn } from '@/lib/utils'
 import { Bed, MapPin, Search } from 'lucide-react'
 import { useState } from 'react'
-import places from '@/data/place.json'
 
 const roomsOptions = [
   { name: 'Todos', value: '', id: 1 },
@@ -41,9 +41,10 @@ const Hero = () => {
         <br className="block md:hidden" /> Conecta.
       </h1>
       <div className="md:border-2 w-[min(771px,94%)] md:rounded-full flex md:bg-background group flex-col gap-4 md:gap-0 md:flex-row">
-        <div className="h-full relative flex-1 flex justify-between focus-within:shadow-lg p-[10px] rounded-lg md:bg-none bg-background md:rounded-full hover:bg-bg-dark group border md:border-none">
+        <div className="h-full relative flex-1 flex justify-between">
           <Label
-            className="flex flex-col justify-between ml-8 flex-1"
+            className="flex flex-col justify-between flex-1 hover:bg-gray0 
+            p-[10px] pl-8 focus-within:shadow-lg md:rounded-full rounded-lg md:bg-none bg-background border md:border-none"
             onClick={() => setLocalPop(true)}
           >
             <span className="flex items-center gap-2">
@@ -56,6 +57,7 @@ const Hero = () => {
               defaultValue={local}
             />
           </Label>
+
           {localPop && (
             <Card className="absolute -bottom-1 translate-y-full left-0 right-0 z-[2]">
               <span className="text-sm block p-4">
@@ -86,9 +88,10 @@ const Hero = () => {
 
         <div className="w-[2px] bg-input my-[10px] hidden md:block group-focus-within:opacity-0 group-hover:opacity-0"></div>
 
-        <div className="relative flex-1 flex justify-between focus-within:shadow-lg p-[10px] rounded-lg md:bg-none bg-background md:rounded-full hover:bg-bg-dark border md:border-none">
+        <div className="relative flex-1 flex justify-between items-center">
           <Label
-            className="flex flex-col justify-between ml-8"
+            className="flex flex-col justify-between flex-1 hover:bg-gray0 
+            p-[10px] pl-8 focus-within:shadow-lg md:rounded-full rounded-lg md:bg-none bg-background border md:border-none"
             onClick={() => setRoomsPop(true)}
           >
             <span className="flex items-center gap-2">
@@ -146,7 +149,7 @@ const Hero = () => {
           )}
           <Button
             className={cn(
-              'h-14 rounded-full transition-all w-14 gap-2 hidden md:flex',
+              'h-14 rounded-full transition-all w-14 gap-2 hidden md:flex absolute right-[10px]',
               local ? 'w-auto' : ''
             )}
             disabled={!local}
