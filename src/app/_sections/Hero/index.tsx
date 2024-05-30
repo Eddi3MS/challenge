@@ -14,6 +14,7 @@ import places from '@/data/place.json'
 import { cn } from '@/lib/utils'
 import { useLocation } from '@/store/location'
 import { Bed, MapPin, Search } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 const roomsOptions = [
@@ -30,6 +31,7 @@ const Hero = () => {
   const [localPop, setLocalPop] = useState(false)
   const [rooms, setRooms] = useState('')
   const [roomsPop, setRoomsPop] = useState(false)
+  const router = useRouter()
 
   const handleSearch = () => {
     const city = local.trim().split(',')[0]
@@ -37,6 +39,8 @@ const Hero = () => {
       city,
       rooms: rooms ? Number(rooms) : undefined,
     })
+
+    router.push('#locations')
   }
 
   return (
