@@ -38,7 +38,7 @@ const LocationsCarousel = ({
       setApi={setApi}
       key={renderKey}
     >
-      <div className="flex justify-between">
+      <div className="flex justify-start md:justify-between">
         <a
           href="#"
           className="text-link flex gap-2 items-center hover:brightness-110"
@@ -46,10 +46,10 @@ const LocationsCarousel = ({
           Ver todos os imóveis
           <SquareArrowOutUpRight size={16} fontWeight={'bold'} />
         </a>
-        <div className="flex items-center gap-2">
+        <div className="md:flex items-center gap-2 hidden">
           <CarouselPrevious
             variant="outline-gray"
-            className="static -translate-x-0 -translate-y-0"
+            className="static -translate-x-0 -translate-y-0 "
           />
           <CarouselNext
             variant="outline-gray"
@@ -59,7 +59,7 @@ const LocationsCarousel = ({
       </div>
       <CarouselContent className="pb-2">
         {locales.map((local, i) => (
-          <CarouselItem className="md:basis-1/2 lg:basis-1/4" key={i}>
+          <CarouselItem className="basis-2/3 md:basis-1/2 lg:basis-1/4" key={i}>
             <Card className="overflow-hidden">
               <ImageCarousel />
 
@@ -97,7 +97,7 @@ const LocationsCarousel = ({
         ))}
       </CarouselContent>
 
-      <div className="flex justify-center gap-1 mt-2">
+      <div className="hidden md:flex justify-center gap-1 mt-2">
         {Array.from({ length: count }).map((_, i) => {
           return (
             <span

@@ -23,11 +23,13 @@ const Locations = () => {
 
   return (
     <section
-      className="w-[min(94%,1248px)] mx-auto mt-20 pb-4 relative"
+      className="w-[min(94%,1248px)] mx-auto mt-20 pb-16 md:pb-20 relative"
       id="locations"
     >
       <div className="flex items-center gap-2">
-        <h2 className="text-gray5 text-2xl font-bold">Novos Anúncios em </h2>
+        <h2 className="text-gray5 text-lg md:text-2xl font-bold">
+          Novos Anúncios em{' '}
+        </h2>
         <LocationSelect />
       </div>
 

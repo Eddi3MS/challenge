@@ -41,6 +41,7 @@ const LocationSearch = ({
               className="bg-inherit w-full truncate"
               placeholder="Qual é a localização?"
               defaultValue={locale}
+              readOnly
             />
           </Label>
         </div>

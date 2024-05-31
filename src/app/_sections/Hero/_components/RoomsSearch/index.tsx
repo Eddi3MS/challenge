@@ -90,7 +90,7 @@ const RoomsSearch = ({
             <Button
               key={r.id}
               variant={
-                rooms === r.name || (!rooms && !r.value)
+                rooms === r.value || (!rooms && !r.value)
                   ? 'outline'
                   : 'outline-gray'
               }
