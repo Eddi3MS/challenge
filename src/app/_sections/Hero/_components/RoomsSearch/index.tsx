@@ -73,7 +73,10 @@ const RoomsSearch = ({
               searchEnable ? 'w-auto' : ''
             )}
             disabled={!searchEnable}
-            onClick={handleSearch}
+            onClick={(e) => {
+              e.preventDefault()
+              handleSearch()
+            }}
           >
             <Search /> {searchEnable && <span>Buscar</span>}
           </Button>
