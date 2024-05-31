@@ -46,30 +46,26 @@ const RoomsSearch = ({
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <div className="relative flex-1 flex justify-between items-center">
-          <Label
-            className={cn(
-              'flex flex-col justify-between flex-1 hover:bg-gray0 p-[10px] pl-8 md:rounded-full rounded-lg md:bg-none bg-background border md:border-none',
-              open && 'shadow-lg'
-            )}
-          >
-            <span className="flex items-center gap-2">
-              <Bed size={24} />
-              <span className="text-black font-bold text-sm">
-                Nº de Quartos
-              </span>
-            </span>
-            <Input
-              className="bg-inherit"
-              placeholder="Quantos Quartos?"
-              readOnly
-              defaultValue={rooms}
-            />
-          </Label>
+        <div
+          className={cn(
+            'relative flex flex-col justify-between flex-1 hover:bg-gray0 p-[10px] pl-8 md:rounded-full rounded-lg md:bg-none bg-background border md:border-none',
+            open && 'shadow-lg'
+          )}
+        >
+          <span className="flex items-center gap-2">
+            <Bed size={24} />
+            <span className="text-black font-bold text-sm">Nº de Quartos</span>
+          </span>
+          <Input
+            className="bg-inherit"
+            placeholder="Quantos Quartos?"
+            readOnly
+            defaultValue={rooms}
+          />
 
           <Button
             className={cn(
-              'h-14 rounded-full transition-all w-14 gap-2 hidden md:flex absolute right-[10px]',
+              'h-14 rounded-full transition-all w-14 gap-2 hidden md:flex absolute right-[10px] top-[6px]',
               searchEnable ? 'w-auto' : ''
             )}
             disabled={!searchEnable}
@@ -77,6 +73,7 @@ const RoomsSearch = ({
               e.preventDefault()
               handleSearch()
             }}
+            aria-label="buscar imóveis"
           >
             <Search /> {searchEnable && <span>Buscar</span>}
           </Button>

@@ -26,24 +26,22 @@ const LocationSearch = ({
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <div className="flex-1">
-          <Label
-            className={cn(
-              'flex flex-col justify-between flex-1 hover:bg-gray0 p-[10px] pl-8 md:rounded-full rounded-lg md:bg-none bg-background border md:border-none',
-              open && 'shadow-lg'
-            )}
-          >
-            <span className="flex items-center gap-2">
-              <MapPin size={24} />
-              <span className="text-black font-bold text-sm">Localização</span>
-            </span>
-            <Input
-              className="bg-inherit w-full truncate"
-              placeholder="Qual é a localização?"
-              defaultValue={locale}
-              readOnly
-            />
-          </Label>
+        <div
+          className={cn(
+            'flex flex-col justify-between flex-1 hover:bg-gray0 p-[10px] pl-8 md:rounded-full rounded-lg md:bg-none bg-background border md:border-none',
+            open && 'shadow-lg'
+          )}
+        >
+          <span className="flex items-center gap-2">
+            <MapPin size={24} />
+            <span className="text-black font-bold text-sm">Localização</span>
+          </span>
+          <Input
+            className="bg-inherit w-full truncate"
+            placeholder="Qual é a localização?"
+            defaultValue={locale}
+            readOnly
+          />
         </div>
       </PopoverTrigger>
       <PopoverContent className="w-full p-0">

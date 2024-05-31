@@ -28,7 +28,7 @@ const Locations = () => {
     >
       <div className="flex items-center gap-2">
         <h2 className="text-gray5 text-lg md:text-2xl font-bold">
-          Novos Anúncios em{' '}
+          Novos Anúncios em
         </h2>
         <LocationSelect />
       </div>

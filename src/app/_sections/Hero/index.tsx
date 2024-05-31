@@ -67,6 +67,7 @@ const Hero = () => {
           className="h-14 rounded-lg transition-all  gap-2 flex md:hidden w-full"
           disabled={!locale}
           onClick={handleSearch}
+          aria-label="buscar imóveis"
         >
           <Search /> <span>Buscar Imóveis</span>
         </Button>
