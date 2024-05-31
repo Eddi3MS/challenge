@@ -18,7 +18,10 @@ const LocationSelect = () => {
 
   return (
     <Select value={innerCity} onValueChange={(city) => setLocation({ city })}>
-      <SelectTrigger className="w-fit border-none gap-2  text-lg md:text-2xl font-bold outline-none focus:ring-transparent h-auto p-0 text-orange-dark [&>svg]:font-bold">
+      <SelectTrigger
+        aria-label="Selecione uma cidade"
+        className="w-fit border-none gap-2  text-lg md:text-2xl font-bold outline-none focus:ring-transparent h-auto p-0 text-orange-dark [&>svg]:font-bold"
+      >
         <SelectValue placeholder="Todos os tipos" />
       </SelectTrigger>
       <SelectContent>

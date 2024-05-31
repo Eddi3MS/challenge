@@ -60,7 +60,11 @@ const Header = () => {
           </Button>
           <div className="gap-8 items-center hidden lg:flex">
             <Button variant="outline">Anunciar Imóvel</Button>
-            <a href="#" className="hover:brightness-75 transition-colors">
+            <a
+              href="#"
+              className="hover:brightness-75 transition-colors"
+              title="Entrar"
+            >
               Entrar
             </a>
           </div>

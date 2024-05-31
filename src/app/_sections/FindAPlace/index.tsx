@@ -20,7 +20,7 @@ const FindAPlace = () => {
         <div className="flex justify-end">
           <Tabs
             defaultValue="rent"
-            className="w-[513px] bg-background rounded-[16px] overflow-hidden"
+            className="w-[513px] bg-white rounded-[16px] overflow-hidden"
           >
             <TabsList className="border-b w-full">
               <TabsTrigger value="rent" asChild>

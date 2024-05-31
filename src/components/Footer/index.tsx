@@ -41,13 +41,25 @@ const Footer = () => {
             © Copyright 2021 Netimóveis Brasil SA. Todos os direitos reservados.
           </p>
           <div className="flex flex-col md:flex-row gap-2 md:gap-6">
-            <a href="#" className="hover:text-purple-dark transition-all">
+            <a
+              href="#"
+              className="hover:text-purple-dark transition-all"
+              title="Política de Privacidade"
+            >
               Política de Privacidade
             </a>
-            <a href="#" className="hover:text-purple-dark transition-all">
+            <a
+              href="#"
+              className="hover:text-purple-dark transition-all"
+              title="Termos de Uso"
+            >
               Termos de uso
             </a>
-            <a href="#" className="hover:text-purple-dark transition-all">
+            <a
+              href="#"
+              className="hover:text-purple-dark transition-all"
+              title="Lei Geral de Proteção de Dados"
+            >
               LGPD
             </a>
             <span>Versão: 25/10/2021</span>
@@ -55,25 +67,25 @@ const Footer = () => {
         </div>
 
         <div className="flex gap-8">
-          <a href="#">
+          <a href="#" title="instagram">
             <Instagram
               size={32}
               className="hover:text-purple-dark transition-all"
             />
           </a>
-          <a href="#">
+          <a href="#" title="facebook">
             <Facebook
               size={32}
               className="hover:text-purple-dark transition-all"
             />
           </a>
-          <a href="#">
+          <a href="#" title="linkedin">
             <Linkedin
               size={32}
               className="hover:text-purple-dark transition-all"
             />
           </a>
-          <a href="#">
+          <a href="#" title="youtube">
             <Youtube
               size={32}
               className="hover:text-purple-dark transition-all"

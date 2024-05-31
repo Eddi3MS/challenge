@@ -51,6 +51,7 @@ const RoomsSearch = ({
             'relative flex flex-col justify-between flex-1 hover:bg-gray0 p-[10px] pl-8 md:rounded-full rounded-lg md:bg-none bg-background border md:border-none',
             open && 'shadow-lg'
           )}
+          role="button"
         >
           <span className="flex items-center gap-2">
             <Bed size={24} />
