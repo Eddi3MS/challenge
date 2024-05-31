@@ -1,15 +1,13 @@
 import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { DollarSign, HomeIcon, KeyRound } from 'lucide-react'
-import React from 'react'
+import { ArrowRight, DollarSign, HomeIcon, KeyRound } from 'lucide-react'
 
 const FindAPlace = () => {
   return (
     <section className="bg-gray0 pt-[72px] pb-[88px]">
-      <div className="grid grid-cols-2 w-[min(94%,1248px)] mx-auto">
+      <div className="grid grid-cols-1 gap-y-4 gap-x-4 md:grid-cols-2 w-[min(94%,1248px)] mx-auto">
         <div>
-          <h2 className="font-semibold text-6xl mb-12">
+          <h2 className="font-semibold text-5xl xl:text-6xl mb-12">
             Encontre um Lugar <br /> que é a sua cara
           </h2>
           <p className="text-xl text-gray1 max-w-lg">
@@ -110,6 +108,29 @@ const FindAPlace = () => {
                 className="flex text-gray1 hover:text-purple-dark underline underline-offset-[6px] text-sm"
               >
                 Saiba como funciona a Compra na NetImóveis
+              </a>
+            </TabsContent>
+            <TabsContent value="post" className="px-10 py-12">
+              <h3 className="mb-4 font-bold text-3xl text-gray5">
+                Anuncie seu Imóvel
+              </h3>
+              <p className="text-gray1 leading-tight mb-10">
+                Anuncie gratuitamente na maior rede de imobiliárias do Brasil.
+                Sed ut perspiciatis unde omnis iste natus error sit.
+              </p>
+
+              <Button
+                variant="outline"
+                className="rounded-lg mb-11 h-12 font-semibold"
+              >
+                Anunciar Imóvel
+              </Button>
+
+              <a
+                href="#"
+                className="flex text-gray1 hover:text-purple-dark underline underline-offset-[6px] mb-[34px] text-sm items-center gap-2"
+              >
+                Descubra quanto Cobrar <ArrowRight />
               </a>
             </TabsContent>
           </Tabs>
